@@ -10,7 +10,7 @@ check_error() {
   fi
 }
 
-TAG=v1.4.8
+TAG=release-2.3
 
 ROOT=$PWD
 
@@ -35,7 +35,7 @@ git clone https://github.com/hyperledger/fabric
 check_error
 
 cd fabric
-git checkout -b $TAG $TAG
+git checkout -b $TAG origin/$TAG
 check_error
 GO_TAGS=pkcs11 make peer orderer cryptogen configtxgen configtxlator
 check_error
@@ -43,7 +43,7 @@ cd ..
 
 git clone https://github.com/hyperledger/fabric-ca
 cd fabric-ca
-git checkout -b $TAG $TAG
+git checkout -b release-1.4 origin/release-1.4
 check_error
 make fabric-ca-client
 check_error
