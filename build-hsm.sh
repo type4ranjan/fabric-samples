@@ -54,7 +54,7 @@ if [ -d ../bin ]; then
   rm -rf ../bin/*
 fi
 mkdir -p ../bin
-cp $GO_HL_DIR/fabric/.build/bin/* ../bin
+cp $GO_HL_DIR/fabric/build/bin/* ../bin
 cp $GO_HL_DIR/fabric-ca/bin/* ../bin
 
 mkdir -p ../first-network-luna/bin
