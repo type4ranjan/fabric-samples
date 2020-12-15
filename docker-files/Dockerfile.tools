@@ -2,7 +2,7 @@ ARG IMAGE_TAG
 
 FROM hyperledger/fabric-tools:$IMAGE_TAG
 
-RUN apt-get update && apt-get install -y libtool
+#RUN apt-get update && apt-get install -y libtool
  
 COPY ./bin/peer /usr/local/bin
 COPY ./bin/fabric-ca-client /usr/local/bin
